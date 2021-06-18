@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Clock</title>
+
+    <style type="text/css">
+
+    body {
+        background: radial-gradient(rgba(255,200,0,1),black);
+        text-align: center;
+    }
+    .clock {
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(white,black);
+        display: inline-block;
+        border-radius: 50%;
+        border: 50px solid black;
+        padding: 20px;
+    }
+
+    .sec, .min ,.hour {
+        border-radius: 10px;
+        line-height: 45px;
+        color: white;
+        position: relative;
+        transform-origin: bottom;
+
+    }
+    .sec {
+        height: 250px;
+        width: 10px; 
+        background: radial-gradient(black,red);
+        left: 245px;
+        z-index: 3;
+        animation: sec_anim 10s linear infinite;
+    }
+
+    .min {
+        height: 250px;
+        width: 15px;
+        background: radial-gradient(black,blue);
+        left: 242.5px;
+        top: -250px;
+        z-index: 2;
+        animation: min_anim 15s linear infinite;
+
+    }
+
+    .hour {
+        height: 180px;
+        width: 20px;
+        background: radial-gradient(black,green);
+        left: 240px;
+        top: -430px;
+        z-index: 1;
+        animation: hour_anim 20s linear infinite;
+
+    }
+     @keyframes sec_anim{
+         from{transform: rotateZ(0deg);}
+         to{transform: rotateZ(360deg);}
+     }
+              
+         @keyframes min_anim{
+         from{transform: rotateZ(0deg);}
+         to{transform: rotateZ(360deg);}
+         }
+        
+         @keyframes hour_anim{
+         from{transform: rotateZ(0deg);}
+         to{transform: rotateZ(360deg);}
+
+     }
+
+     .one,.two,.three,.four,.five,.six,.seven,.eight,.nine,.ten,.eleven,.twelve {
+         font-family: arial;
+         font-size: 3.7em;
+         color: #e2ecef;
+         position: relative;
+         z-index: 0;
+         text-shadow: 0 10px black;
+     }
+
+
+     .one {
+           top: -649px; left: 103px;
+       }
+       
+       .two{
+           top: -640px; left: 182px;
+       }
+       
+       
+       .three {
+           top: -603px; left: 228px;
+       }
+
+       .four {
+           top: -564px; left: 183px;
+       }
+
+       .five {
+           top: -561px; left: 106px;
+       }
+
+       .six {
+           top: -590px;
+       }
+
+     .seven {
+           top: -701px; left: -106px;
+       }
+       
+       .eight {
+           top: -840px; left: -183px;
+       }
+       
+       .nine {
+           top: -1016px; left: -228px;
+       }
+       
+       .ten {
+           top: -1191px; left: -182px;
+       }
+       
+       .eleven {
+           top: -1338px; left: -103px;
+       }
+       
+       .twelve {
+           top: -1440px; 
+       }
+       
+       
+    </style>
+</head>
+<body>
+    
+    <div class="clock">
+
+        <div class="sec">S</div>
+        <div class="min">M</div>
+        <div class="hour">H</div>
+
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        <div class="seven">7</div>
+        <div class="eight">8</div>
+        <div class="nine">9</div>
+        <div class="ten">10</div>
+        <div class="eleven">11</div>
+        <div class="twelve">12</div>
+
+    </div>
+</body>
+</html>
